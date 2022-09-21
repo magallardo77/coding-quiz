@@ -1,6 +1,6 @@
 const start = document.querySelector("#startQuiz")
 const create = document.querySelector("#create")
-const time = document.querySelector(".time")
+const time = document.querySelector("#time")
 const quizQuestion = document.querySelector("#question")
 const sumbit = document.querySelector("#sumbit")
 let question = 0
