@@ -1,65 +1,91 @@
 const start = document.querySelector("#startQuiz")
 const create = document.querySelector("#create")
 const time = document.querySelector(".time")
-const question = document.querySelector("#question")
+const quizQuestion = document.querySelector("#question")
 const sumbit = document.querySelector("#sumbit")
+let question = 0
+let seconds = 75
 
-const main
 let questions = [
     {
-        Q: 
-        CH:
-        A:
+        quizQ: "Which of these values is not a JavaScript data type?"
+        options:["Boolean", "Number","ID","String"]
+        answer:"ID"
     }
     {
-        Q: 
-        CH:
-        A:
+        quizQ:"Which variable choice reassigns its value?" 
+        options:["Let", "Const"]
+        answer:"Let"
     }
     {
-        Q: 
-        CH:
-        A:
+        quizQ: "How do you select a single ID in JavaScript"
+        options:["getElementbyID", "createElement", "querySelectorAll", "addEventListenter"]
+        answer:"getElementbyID" 
     }
     {
-        Q: 
-        CH:
-        A:
+        quizQ: "Which section of the HTMl file should you use to link your CSS file?"
+        options: ["Body", "Hsead", "Footer", "Main"]
+        answer: "Head"
     }
-    {
-        Q: 
-        CH:
-        A:
+]
+    function createQuiz() {
+        start.setAttribute("style", "display:none")
     }
-function createQuiz()
-    for (let i = 0; i < questions.length; i++){
-    const eachQuestion = questions[i];
-    console.log(questions.Q);
 
-    const parentQuestion = document.createElement();
-    parentQuestion.style.display = "flex";
+    function beginTimer() {
+        const timerEnd = setInterval (function() {
+            seconds--;
+            time.textContent - seconds
+        }, 1000);
+    }
 
-    const button = document.createElement("button");
-    button.textContent = "See";
+    function renderQuestions() {
+        quizQuestion.innerHTML = ""
+        quizQuestion.textContent = questions[quizQuestion].quizQ
+        for (let i = 0; i < questions[quizQuestion].options.length; i++) {
+            let quizOption = questions[quizQuestion].options[i]
+            let button = document.createElement("button")
+            button.textContent = quizOption;
+            $(button.on("click", sumbit)
+            $(button.attr("data-value", quizOption)
+            
 
-    const h2 = document.createElement("h2")
-    h2.textContent = `${questions.Q} ${questions.CH}`
 
-    const a = document.createElement("a");
-    a.setAttribute("href", `${questions.A}`);
-    a.textContent = "Answer:"
-
-    parentQuestion.appendChild(h2);
-    main.appendChild(parentQuestion);
-
-    main.addEventListener("click", function(event) {
-        if (event.target.matches("button")) {
-            console.log("clicked for", event.target.getAttribute("data-location"))
-            localStorage.setItem("requestedLocation", event.target.getAttribute("data-locataion"))
-            window.location.replace("./second-html.html")
+            // let optionButton = document.createElement("button")
         }
     }
-}
-    createQuiz()
-]
+
+
+// function createQuiz()
+//     for (let i = 0; i < questions.length; i++){
+//     const eachQuestion = questions[i];
+//     console.log(questions.Q);
+
+//     const parentQuestion = document.createElement();
+//     parentQuestion.style.display = "flex";
+
+//     const button = document.createElement("button");
+//     button.textContent = "See";
+
+//     const h2 = document.createElement("h2")
+//     h2.textContent = `${questions.Q} ${questions.CH}`
+
+//     const a = document.createElement("a");
+//     a.setAttribute("href", `${questions.A}`);
+//     a.textContent = "Answer:"
+
+//     parentQuestion.appendChild(h2);
+//     main.appendChild(parentQuestion);
+
+//     main.addEventListener("click", function(event) {
+//         if (event.target.matches("button")) {
+//             console.log("clicked for", event.target.getAttribute("data-location"))
+//             localStorage.setItem("requestedLocation", event.target.getAttribute("data-locataion"))
+//             window.location.replace("./second-html.html")
+//         }
+//     }
+// }
+
+//     createQuiz()
+// ]
 
