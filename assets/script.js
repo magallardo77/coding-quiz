@@ -28,8 +28,41 @@ let questions = [
         answer: "Head"
     }
 ]
-function createQuiz() {
-    start.setAttribute("style", "display:none")
+// function createQuiz() {
+    //     start.setAttribute("style", "display:none")
+}
+function createQuiz()
+    for (let i = 0; i < questions.length; i++){
+    const eachQuestion = questions[i];
+    console.log(questions.Q);
+
+    const parentQuestion = document.createElement();
+    parentQuestion.style.display = "flex";
+
+    const button = document.createElement("button");
+    button.textContent = "See";
+
+    const h2 = document.createElement("h2")
+    h2.textContent = `${questions.Q} ${questions.CH}`
+
+    const a = document.createElement("a");
+    a.setAttribute("href", `${questions.A}`);
+    a.textContent = "Answer:"
+
+    parentQuestion.appendChild(h2);
+    main.appendChild(parentQuestion);
+
+    main.addEventListener("click", function(event) {
+        if (event.target.matches("button")) {
+            console.log("clicked for", event.target.getAttribute("data-location"))
+            localStorage.setItem("requestedLocation", event.target.getAttribute("data-locataion"))
+            window.location.replace("./second-html.html")
+        }
+    }
+}
+
+    createQuiz()
+]
 }
 
 function beginTimer() {
@@ -37,7 +70,6 @@ function beginTimer() {
         seconds--;
         time.textContent - seconds
     }, 1000);
-}
 
 function renderQuestions() {
     quizQuestion.innerHTML = ""
@@ -65,42 +97,16 @@ function renderQuestions() {
                 beginTimer();
             })
         }
-
+        $(document.querySelector("form").on("sumbit", function(event){
+            event.preventDefault();
+            let input = document.querySelector("form")[0]
+            const highScore ={score: seconds, initials: input.value};
+            localStorage.setItem("highScores", JSON.stringify(highScore));
+        })
 
 
     }
 
 
-// function createQuiz()
-//     for (let i = 0; i < questions.length; i++){
-//     const eachQuestion = questions[i];
-//     console.log(questions.Q);
 
-//     const parentQuestion = document.createElement();
-//     parentQuestion.style.display = "flex";
-
-//     const button = document.createElement("button");
-//     button.textContent = "See";
-
-//     const h2 = document.createElement("h2")
-//     h2.textContent = `${questions.Q} ${questions.CH}`
-
-//     const a = document.createElement("a");
-//     a.setAttribute("href", `${questions.A}`);
-//     a.textContent = "Answer:"
-
-//     parentQuestion.appendChild(h2);
-//     main.appendChild(parentQuestion);
-
-//     main.addEventListener("click", function(event) {
-//         if (event.target.matches("button")) {
-//             console.log("clicked for", event.target.getAttribute("data-location"))
-//             localStorage.setItem("requestedLocation", event.target.getAttribute("data-locataion"))
-//             window.location.replace("./second-html.html")
-//         }
-//     }
-// }
-
-//     createQuiz()
-// ]
 
