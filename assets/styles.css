@@ -15,8 +15,14 @@ section {
 
 main{
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #start {
     justify-content: center;
+}
+
+.hide {
+    display: none;
 }
