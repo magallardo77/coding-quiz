@@ -36,7 +36,7 @@ function createQuiz() {
     console.log(start)
         start.setAttribute("class", "hide")
         beginTimer()
-        renderQuestions()
+        showQuestions()
 }
 
 start.addEventListener('click', createQuiz)
@@ -50,7 +50,7 @@ function beginTimer() {
         if (seconds == 0)clearInterval(timerEnd)
     }, 1000);
 }
-function renderQuestions() {
+function showQuestions() {
     quizQuestion.innerHTML = ""
     quizQuestion.textContent = questions[index].quizQ
     options1.textContent = questions[index].options[0]
@@ -61,15 +61,20 @@ function renderQuestions() {
 
 addEventListener("click", nextQuiz); {
     if (textContent = questions.answer) {nextQuiz()}
-    else (seconds -= seconds -5)
+    // else {(seconds -= seconds -5)
+        showQuestions
+        nextQuiz()
+        localStorage.setItem("requestedLocation", target.getAttribute("data-locataion"))
+            window.location.replace("")
 }
+
 
 
 
     function nextQuiz() {
         if (index < questions.length - 1) {
             index++;
-            renderQuestions();
+            showQuestions();
         }else {
             clearInterval(timerEnd);
             quizQuestion.innerHTML = "";
@@ -125,12 +130,12 @@ addEventListener("click", nextQuiz); {
 //     parentQuestion.appendChild(h2);
 //     main.appendChild(parentQuestion);
 
-//     main.addEventListener("click", function(event) {
-//         if (event.target.matches("button")) {
-//             console.log("clicked for", event.target.getAttribute("data-location"))
-//             localStorage.setItem("requestedLocation", event.target.getAttribute("data-locataion"))
-//             window.location.replace("./second-html.html")
-//         }
+    // main.addEventListener("click", function(event) {
+    //     if (event.target.matches("button")) {
+    //         console.log("clicked for", event.target.getAttribute("data-location"))
+            // localStorage.setItem("requestedLocation", event.target.getAttribute("data-locataion"))
+            // window.location.replace("./second-html.html")}
+    //     }
 //     }
 // }
            
