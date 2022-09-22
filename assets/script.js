@@ -59,7 +59,6 @@ function renderQuestions() {
     options4.textContent = questions[index].options[3]
 }
 
-// We need add event listener to listen to each button click of the options.If the text content of that button is equal to the answers, call the next quiz function, else minus time for the timer
 
 
     function nextQuiz() {
@@ -72,12 +71,12 @@ function renderQuestions() {
 
         }
     }
-        // $(document.querySelector("form").on("sumbit", function(event){
-        //     event.preventDefault();
-        //     let input = document.querySelector("form")[0]
-        //     const highScore ={score: seconds, initials: input.value};
-        //     localStorage.setItem("highScores", JSON.stringify(highScore));
-        // }))
+        $(document.querySelector("form").on("sumbit", function(event){
+            event.preventDefault();
+            let input = document.querySelector("form")[0]
+            const highScore ={score: seconds, initials: input.value};
+            localStorage.setItem("highScores", JSON.stringify(highScore));
+        }))
 
 // for (let i = 0; i < questions[quizQuestion].options.length; i++) {
     //     let quizOption = questions[quizQuestion].options[i]
