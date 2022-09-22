@@ -8,7 +8,7 @@ const options2 = document.querySelector("#option2")
 const options3 = document.querySelector("#option3")
 const options4 = document.querySelector("#option4")
 let index = 0
-let seconds = 10
+let seconds = 75
 
 let questions = [
     {
@@ -59,6 +59,11 @@ function renderQuestions() {
     options4.textContent = questions[index].options[3]
 }
 
+addEventListener("click", nextQuiz); {
+    if (textContent = questions.answer) {nextQuiz()}
+    else (seconds -= seconds -5)
+}
+
 
 
     function nextQuiz() {
@@ -71,21 +76,29 @@ function renderQuestions() {
 
         }
     }
-        $(document.querySelector("form").on("sumbit", function(event){
-            event.preventDefault();
-            let input = document.querySelector("form")[0]
-            const highScore ={score: seconds, initials: input.value};
-            localStorage.setItem("highScores", JSON.stringify(highScore));
-        }))
+        // $(document.querySelector("form").on("sumbit", function(event){
+        //     event.preventDefault();
+        //     let input = document.querySelector("form")[0]
+        //     const highScore ={score: seconds, initials: input.value};
+        //     localStorage.setItem("highScores", JSON.stringify(highScore));
+        // }))
+
+
+        //  highScore();
+        //     $(start.on("click", function(){
+        //         renderQuestions();
+        //         beginTimer();
+        //     })
+
 
 // for (let i = 0; i < questions[quizQuestion].options.length; i++) {
-    //     let quizOption = questions[quizQuestion].options[i]
-    //     let button = document.createElement("button")
-    //     button.textContent = quizOption;
-    //     $(button.on("click", sumbit))
-    //         $(button.attr("data-value", quizOption))
-    //     }
-    // let optionButton = document.createElement("button")
+//         let quizOption = questions[quizQuestion].options[i]
+//         let button = document.createElement("button")
+//         button.textContent = quizOption;
+//         $(button.on("click", sumbit))
+//             $(button.attr("data-value", quizOption))
+//         }
+//     let optionButton = document.createElement("button")
     
 
 
@@ -120,8 +133,4 @@ function renderQuestions() {
 //         }
 //     }
 // }
-            //highScore();
-            // $(start.on("click", function(){
-            //     renderQuestions();
-            //     beginTimer();
-            // })
+           
