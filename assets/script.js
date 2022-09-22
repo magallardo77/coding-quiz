@@ -33,15 +33,12 @@ let questions = [
     },
 ]
 function createQuiz() {
-    console.log(start)
         start.setAttribute("class", "hide")
         beginTimer()
-        renderQuestions()
+        showQuestions()
 }
 
 start.addEventListener('click', createQuiz)
-    
-
 
 function beginTimer() {
     const timerEnd = setInterval(function () {
@@ -50,7 +47,7 @@ function beginTimer() {
         if (seconds == 0)clearInterval(timerEnd)
     }, 1000);
 }
-function renderQuestions() {
+function showQuestions() {
     quizQuestion.innerHTML = ""
     quizQuestion.textContent = questions[index].quizQ
     options1.textContent = questions[index].options[0]
@@ -58,21 +55,56 @@ function renderQuestions() {
     options3.textContent = questions[index].options[2]
     options4.textContent = questions[index].options[3]
 }
-
+// options1.addEventListener('click', options1); {
+//     if (textContent = questions.answer){nextQuiz()}
+//     else seconds = seconds - 5
+// }
+// options2.addEventListener('click', options2); {
+//     if (textContent = questions.answer){nextQuiz()}
+//     else seconds = seconds - 5
+// }
+// options3.addEventListener('click', options3); {
+//     if (textContent = questions.answer){nextQuiz()}
+//     else seconds = seconds - 5
+// }
+// options4.addEventListener('click', options4); {
+//     if (textContent = questions.answer){nextQuiz()}
+//     {else seconds = seconds - 5}
+// }
 // We need add event listener to listen to each button click of the options.If the text content of that button is equal to the answers, call the next quiz function, else minus time for the timer
 
 
     function nextQuiz() {
         if (index < questions.length - 1) {
             index++;
-            renderQuestions();
+            showQuestions();
         }else {
             clearInterval(timerEnd);
             quizQuestion.innerHTML = "";
 
         }
     }
-        // $(document.querySelector("form").on("sumbit", function(event){
+
+    function correctAnswer(event) {
+        const correctbtn = event.target
+        const correct = correctbtn.dataset.answer
+        
+    }
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // $(document.querySelector("form").on("sumbit", function(event){
         //     event.preventDefault();
         //     let input = document.querySelector("form")[0]
         //     const highScore ={score: seconds, initials: input.value};
@@ -123,6 +155,6 @@ function renderQuestions() {
 // }
             //highScore();
             // $(start.on("click", function(){
-            //     renderQuestions();
+            //     showQuestions();
             //     beginTimer();
             // })
