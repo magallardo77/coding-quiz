@@ -55,7 +55,7 @@ function showQuestions() {
     options3.textContent = questions[index].options[2]
     options4.textContent = questions[index].options[3]
 }
-<<<<<<< HEAD
+// <<<<<<< HEAD
 // options1.addEventListener('click', options1); {
 //     if (textContent = questions.answer){nextQuiz()}
 //     else seconds = seconds - 5
@@ -73,19 +73,19 @@ function showQuestions() {
 //     {else seconds = seconds - 5}
 // }
 // We need add event listener to listen to each button click of the options.If the text content of that button is equal to the answers, call the next quiz function, else minus time for the timer
-=======
+// =======
 
 addEventListener("click", nextQuiz); {
     if (textContent = questions.answer) {nextQuiz()}
     // else {(seconds -= seconds -5)
-        showQuestions
+        showQuestions()
         nextQuiz()
         localStorage.setItem("requestedLocation", target.getAttribute("data-locataion"))
             window.location.replace("")
 }
 
 
->>>>>>> 9c07fe5afb2b975db0365fc83f9b229fbeeadcd0
+// >>>>>>> 9c07fe5afb2b975db0365fc83f9b229fbeeadcd0
 
 
     function nextQuiz() {
@@ -175,12 +175,9 @@ addEventListener("click", nextQuiz); {
     //     }
 //     }
 // }
-<<<<<<< HEAD
             //highScore();
             // $(start.on("click", function(){
             //     showQuestions();
             //     beginTimer();
             // })
-=======
            
->>>>>>> 9c07fe5afb2b975db0365fc83f9b229fbeeadcd0
