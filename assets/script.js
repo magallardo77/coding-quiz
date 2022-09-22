@@ -8,7 +8,7 @@ const options2 = document.querySelector("#option2")
 const options3 = document.querySelector("#option3")
 const options4 = document.querySelector("#option4")
 let index = 0
-let seconds = 10
+let seconds = 75
 
 let questions = [
     {
@@ -55,6 +55,7 @@ function showQuestions() {
     options3.textContent = questions[index].options[2]
     options4.textContent = questions[index].options[3]
 }
+<<<<<<< HEAD
 // options1.addEventListener('click', options1); {
 //     if (textContent = questions.answer){nextQuiz()}
 //     else seconds = seconds - 5
@@ -72,6 +73,19 @@ function showQuestions() {
 //     {else seconds = seconds - 5}
 // }
 // We need add event listener to listen to each button click of the options.If the text content of that button is equal to the answers, call the next quiz function, else minus time for the timer
+=======
+
+addEventListener("click", nextQuiz); {
+    if (textContent = questions.answer) {nextQuiz()}
+    // else {(seconds -= seconds -5)
+        showQuestions
+        nextQuiz()
+        localStorage.setItem("requestedLocation", target.getAttribute("data-locataion"))
+            window.location.replace("")
+}
+
+
+>>>>>>> 9c07fe5afb2b975db0365fc83f9b229fbeeadcd0
 
 
     function nextQuiz() {
@@ -111,14 +125,22 @@ function showQuestions() {
         //     localStorage.setItem("highScores", JSON.stringify(highScore));
         // }))
 
+
+        //  highScore();
+        //     $(start.on("click", function(){
+        //         renderQuestions();
+        //         beginTimer();
+        //     })
+
+
 // for (let i = 0; i < questions[quizQuestion].options.length; i++) {
-    //     let quizOption = questions[quizQuestion].options[i]
-    //     let button = document.createElement("button")
-    //     button.textContent = quizOption;
-    //     $(button.on("click", sumbit))
-    //         $(button.attr("data-value", quizOption))
-    //     }
-    // let optionButton = document.createElement("button")
+//         let quizOption = questions[quizQuestion].options[i]
+//         let button = document.createElement("button")
+//         button.textContent = quizOption;
+//         $(button.on("click", sumbit))
+//             $(button.attr("data-value", quizOption))
+//         }
+//     let optionButton = document.createElement("button")
     
 
 
@@ -145,16 +167,20 @@ function showQuestions() {
 //     parentQuestion.appendChild(h2);
 //     main.appendChild(parentQuestion);
 
-//     main.addEventListener("click", function(event) {
-//         if (event.target.matches("button")) {
-//             console.log("clicked for", event.target.getAttribute("data-location"))
-//             localStorage.setItem("requestedLocation", event.target.getAttribute("data-locataion"))
-//             window.location.replace("./second-html.html")
-//         }
+    // main.addEventListener("click", function(event) {
+    //     if (event.target.matches("button")) {
+    //         console.log("clicked for", event.target.getAttribute("data-location"))
+            // localStorage.setItem("requestedLocation", event.target.getAttribute("data-locataion"))
+            // window.location.replace("./second-html.html")}
+    //     }
 //     }
 // }
+<<<<<<< HEAD
             //highScore();
             // $(start.on("click", function(){
             //     showQuestions();
             //     beginTimer();
             // })
+=======
+           
+>>>>>>> 9c07fe5afb2b975db0365fc83f9b229fbeeadcd0
